@@ -16,7 +16,7 @@ A comprehensive interface for testing and benchmarking LLM models with support f
 
 - Python 3.8+
 - Node.js 16+ (for frontend)
-- Ollama or LM Studio running locally
+- Ollama or LM Studio running on remote servers in your network
 
 ## 🛠️ Installation
 
@@ -89,8 +89,9 @@ LOG_LEVEL=INFO
 
 # LLM Services Configuration
 DEFAULT_LLM_SERVICE=ollama
-OLLAMA_BASE_URL=http://localhost:11434
-LM_STUDIO_BASE_URL=http://localhost:1234/v1
+# Remote LLM servers - update with your actual server IPs
+OLLAMA_BASE_URL=http://192.168.1.100:11434
+LM_STUDIO_BASE_URL=http://192.168.1.101:1234/v1
 
 # Security
 SECRET_KEY=your-secret-key-here-change-in-production

@@ -33,12 +33,12 @@ class Settings(BaseSettings):
         description="Default LLM service to use"
     )
     ollama_base_url: str = Field(
-        default="http://localhost:11434",
-        description="Ollama API base URL"
+        default="http://192.168.1.100:11434",
+        description="Ollama API base URL (remote server)"
     )
     lm_studio_base_url: str = Field(
-        default="http://localhost:1234/v1",
-        description="LM Studio API base URL"
+        default="http://192.168.1.101:1234/v1",
+        description="LM Studio API base URL (remote server)"
     )
     
     # Security Configuration
