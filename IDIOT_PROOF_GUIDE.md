@@ -13,34 +13,37 @@
 cd /Users/m/llm-bench2/llm-testing-interface
 ```
 
-### Step 2: Activate Virtual Environment (DO THIS FIRST!)
+### Step 2: Run the Magic Startup Script (EASY!)
+```bash
+python START_EVERYTHING.py
+```
+**✅ SUCCESS**: You should see "SUCCESS! Everything is running!" and both URLs
+
+### Step 3: Open Your Browser
+- Go to: http://localhost:3000
+- You should see the LLM Testing Interface!
+
+---
+
+## 🎯 ALTERNATIVE: Manual Steps (If Magic Script Doesn't Work)
+
+### Step 1: Activate Virtual Environment
 ```bash
 cd backend
 source venv/bin/activate
 cd ..
 ```
-**✅ SUCCESS**: You should see `(venv)` at the start of your terminal prompt
 
-### Step 3: Start the Backend Server
+### Step 2: Start Backend
 ```bash
 python start_server.py
 ```
-**✅ SUCCESS**: You should see "Server started successfully" and "API running on http://127.0.0.1:8000"
 
-### Step 4: Open New Terminal Tab (Keep Backend Running!)
-- Press `Cmd + T` for new terminal tab
-- Navigate to project: `cd /Users/m/llm-bench2/llm-testing-interface`
-- Activate venv again: `cd backend && source venv/bin/activate && cd ..`
-
-### Step 5: Start the Frontend
+### Step 3: New Terminal Tab - Start Frontend
 ```bash
+cd backend && source venv/bin/activate && cd ..
 python test_frontend.py
 ```
-**✅ SUCCESS**: You should see "Frontend server started successfully"
-
-### Step 6: Open Your Browser
-- Go to: http://localhost:3000
-- You should see the LLM Testing Interface!
 
 ---
 
