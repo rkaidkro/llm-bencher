@@ -1,50 +1,55 @@
 # Quick Start Guide
 
-## 🚀 Get the Server Running in 4 Steps
+## 🚀 Get Everything Running in 1 Command
 
-### Step 1: Install Dependencies
+**From the `m@RKBBC llm-testing-interface %` terminal, just run:**
+
 ```bash
-cd backend
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-pip install requests  # For testing
+./start
 ```
 
-### Step 2: Configure Remote LLM Servers
-```bash
-# From the project root directory:
-python configure_servers.py
-```
-This will help you set up the IP addresses of your remote Ollama and LM Studio servers.
+That's it! This will automatically:
+- ✅ Check your environment
+- ✅ Start the backend server
+- ✅ Start the frontend server
+- ✅ Show you all the URLs
+- ✅ Monitor everything and keep it running
 
-### Step 3: Activate Virtual Environment (IMPORTANT!)
-```bash
-# From the project root directory:
-cd backend
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-cd ..
-```
-**You should see `(venv)` at the start of your terminal prompt**
+## 🔍 Check Status
 
-### Step 4: Start the Server
+To see what's running:
+
 ```bash
-# From the project root directory (with venv activated):
-python start_server.py
+./status
 ```
 
-### Step 5: Start the Frontend
-```bash
-# From the project root directory (with venv activated):
-python test_frontend.py
-```
-This will start the React frontend on http://localhost:3000
+## 🧪 Test Everything
 
-### Step 6: Test Everything
-Open your browser and go to:
+To test the entire system:
+
+```bash
+./test
+```
+
+## 🛑 Stop Everything
+
+To stop all servers:
+
+```bash
+./stop
+```
+
+## 📋 Available URLs
+
+Once running, you can access:
 - **Frontend**: http://localhost:3000
+- **Backend API**: http://127.0.0.1:8000
 - **API Documentation**: http://127.0.0.1:8000/docs
 - **Health Check**: http://127.0.0.1:8000/health
+
+## 🛠️ Manual Setup (Advanced)
+
+If you need to set up manually:
 
 ## 🧪 What We've Built
 
@@ -54,6 +59,14 @@ Open your browser and go to:
 - LLM service integration (Ollama, LM Studio)
 - Health monitoring and metrics
 - RESTful API with automatic documentation
+
+✅ **Phase 2 Complete**: Intuitive Command System
+- One-command startup (`./start`)
+- Status checking (`./status`)
+- Comprehensive testing (`./test`)
+- Clean shutdown (`./stop`)
+- Detailed logging and error reporting
+- Process monitoring and automatic cleanup
 
 ## 📋 Available Endpoints
 
@@ -83,7 +96,17 @@ This is Phase 1 - a working foundation! Next phases will add:
 
 ## 🐛 Troubleshooting
 
-### Virtual Environment Issues
+### Quick Troubleshooting
+
+If something doesn't work:
+
+1. **Check status**: `./status`
+2. **Run tests**: `./test`
+3. **Check logs**: `tail -f logs/backend.log` or `tail -f logs/frontend.log`
+4. **Restart everything**: `./stop` then `./start`
+
+### Manual Troubleshooting
+
 **If you see `source: no such file or directory: venv/bin/activate`:**
 1. Make sure you're in the `backend` directory first
 2. Check if the virtual environment exists: `ls -la venv/`

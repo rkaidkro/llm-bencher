@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# LLM Testing Interface - Test Runner
+# Simple wrapper for the comprehensive testing framework
+
+echo "🧪 Running LLM Testing Interface Tests..."
+echo "=================================================="
+
+# Check if we're in the right directory
+if [[ ! -d "backend" ]]; then
+    echo "❌ Not in llm-testing-interface directory"
+    exit 1
+fi
+
+# Run the appropriate test based on arguments
+if [[ "$1" == "quick" ]]; then
+    echo "🔍 Running quick tests (environment + database)..."
+    python3 test_system.py quick
+elif [[ "$1" == "backend" ]]; then
+    echo "🔧 Running backend tests only..."
+    python3 test_system.py backend
+elif [[ "$1" == "full" ]] || [[ -z "$1" ]]; then
+    echo "🚀 Running full system tests..."
+    python3 test_system.py
+else
+    echo "Usage: ./test [quick|backend|full]"
+    echo "  quick  - Environment and database tests only"
+    echo "  backend - Backend tests only"
+    echo "  full   - Complete system tests (default)"
+    exit 1
+fi

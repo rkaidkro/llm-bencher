@@ -18,7 +18,22 @@ A comprehensive interface for testing and benchmarking LLM models with support f
 - Node.js 16+ (for frontend)
 - Ollama or LM Studio running on remote servers in your network
 
-## 🛠️ Installation
+## 🚀 Quick Start (Recommended)
+
+**One command to start everything:**
+
+```bash
+./start
+```
+
+This will automatically:
+- ✅ Check your environment
+- ✅ Start the backend server
+- ✅ Start the frontend server
+- ✅ Show you all the URLs
+- ✅ Monitor everything and keep it running
+
+## 🛠️ Manual Installation (Advanced)
 
 ### Backend Setup
 
@@ -54,22 +69,35 @@ A comprehensive interface for testing and benchmarking LLM models with support f
    uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
    ```
 
-### Frontend Setup (Coming Soon)
+### Frontend Setup
 
-1. **Navigate to the frontend directory:**
-   ```bash
-   cd llm-testing-interface/frontend
-   ```
+The frontend uses a simple Python-based server for now. The React frontend is being developed.
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+## 🎯 Available Commands
 
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
+| Command | Description |
+|---------|-------------|
+| `./start` | Start everything with full error checking and logging |
+| `./status` | Show current system status |
+| `./test` | Run comprehensive tests with detailed reports |
+| `./stop` | Stop all servers cleanly |
+
+### Testing Options
+
+```bash
+./test          # Full system tests (default)
+./test quick    # Environment and database tests only
+./test backend  # Backend tests only
+./test full     # Complete system tests
+```
+
+### Logs and Debugging
+
+All logs are saved in the `logs/` directory:
+- `logs/backend.log` - Backend server logs
+- `logs/frontend.log` - Frontend server logs
+- `logs/test_system.log` - Test framework logs
+- `logs/test_report_*.json` - Detailed test reports
 
 ## 🔧 Configuration
 
@@ -191,7 +219,30 @@ pytest
 
 ## 🧪 Testing
 
-Run the test suite:
+### Comprehensive Testing Framework
+
+The project includes a comprehensive testing framework that tests every component:
+
+```bash
+./test          # Full system tests (default)
+./test quick    # Environment and database tests only
+./test backend  # Backend tests only
+./test full     # Complete system tests
+```
+
+### Test Features
+
+- ✅ **Environment Testing** - Virtual environment, dependencies, Python version
+- ✅ **Database Testing** - Initialization, file existence, connectivity
+- ✅ **Backend Testing** - Server startup, endpoint health, API functionality
+- ✅ **Frontend Testing** - Server startup, connectivity
+- ✅ **Integration Testing** - Full system integration
+- ✅ **Detailed Reporting** - JSON reports with success rates and error details
+- ✅ **Logging** - Comprehensive logging for debugging
+
+### Legacy Testing
+
+For unit tests:
 ```bash
 pytest
 ```
@@ -226,11 +277,11 @@ docker-compose up -d
 - [x] Basic conversation management
 
 ### Phase 2: Frontend UI ✅
-- [x] React frontend with Vite
-- [x] Navigation and routing
-- [x] Dashboard with stats
-- [x] Connection status indicator
-- [x] Responsive design
+- [x] Simple Python-based frontend server
+- [x] Intuitive command system (`./start`, `./status`, `./test`, `./stop`)
+- [x] Comprehensive testing framework
+- [x] Detailed logging and error reporting
+- [x] Process monitoring and automatic cleanup
 
 ### Phase 2: Multi-Model & Monitoring
 - [ ] Multiple LLM service support
