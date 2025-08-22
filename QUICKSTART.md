@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-## 🚀 Get the Server Running in 3 Steps
+## 🚀 Get the Server Running in 4 Steps
 
 ### Step 1: Install Dependencies
 ```bash
@@ -18,20 +18,29 @@ python configure_servers.py
 ```
 This will help you set up the IP addresses of your remote Ollama and LM Studio servers.
 
-### Step 3: Start the Server
+### Step 3: Activate Virtual Environment (IMPORTANT!)
 ```bash
 # From the project root directory:
+cd backend
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+cd ..
+```
+**You should see `(venv)` at the start of your terminal prompt**
+
+### Step 4: Start the Server
+```bash
+# From the project root directory (with venv activated):
 python start_server.py
 ```
 
-### Step 4: Start the Frontend
+### Step 5: Start the Frontend
 ```bash
-# From the project root directory:
+# From the project root directory (with venv activated):
 python test_frontend.py
 ```
 This will start the React frontend on http://localhost:3000
 
-### Step 5: Test Everything
+### Step 6: Test Everything
 Open your browser and go to:
 - **Frontend**: http://localhost:3000
 - **API Documentation**: http://127.0.0.1:8000/docs
@@ -74,11 +83,33 @@ This is Phase 1 - a working foundation! Next phases will add:
 
 ## 🐛 Troubleshooting
 
+### Virtual Environment Issues
+**If you see `source: no such file or directory: venv/bin/activate`:**
+1. Make sure you're in the `backend` directory first
+2. Check if the virtual environment exists: `ls -la venv/`
+3. If it doesn't exist, create it: `python3 -m venv venv`
+4. Then activate: `source venv/bin/activate`
+
+**If you see `(venv)` in your prompt, you're good to go!**
+
+### Server Won't Start
 If the server won't start:
-1. Make sure you're in the `backend` directory
-2. Ensure virtual environment is activated
+1. Make sure you're in the project root directory
+2. Ensure virtual environment is activated (see `(venv)` in prompt)
 3. Check that all dependencies are installed
 4. Try running: `python -c "from app.main import app; print('App loads successfully')"`
+
+### Common Commands
+```bash
+# Check if venv is activated (should see (venv) in prompt)
+echo $VIRTUAL_ENV
+
+# Activate venv from project root
+cd backend && source venv/bin/activate && cd ..
+
+# Check Python path (should point to venv)
+which python
+```
 
 ---
 
