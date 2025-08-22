@@ -145,7 +145,7 @@ class ConversationResponse(ConversationBase):
 
 class MessageBase(BaseModel):
     """Base Pydantic model for message data."""
-    role: str = Field(..., regex="^(user|assistant)$")
+    role: str = Field(..., pattern="^(user|assistant)$")
     content: str = Field(..., min_length=1)
     model_used: Optional[str] = Field(None, max_length=100)
     response_time_ms: Optional[int] = Field(None, ge=0)
@@ -181,7 +181,7 @@ class LLMServiceUpdate(BaseModel):
     """Pydantic model for updating an LLM service."""
     name: Optional[str] = Field(None, max_length=100)
     base_url: Optional[str] = Field(None, max_length=500)
-    status: Optional[str] = Field(None, regex="^(online|offline|error)$")
+    status: Optional[str] = Field(None, pattern="^(online|offline|error)$")
 
 
 class LLMServiceResponse(LLMServiceBase):
