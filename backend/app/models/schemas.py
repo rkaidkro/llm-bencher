@@ -1,5 +1,6 @@
 """
-Database models and schemas for the LLM Testing Interface.
+Database models and schemas for llm-bencher.
+"""
 
 This module defines the SQLAlchemy models for storing conversations,
 messages, and LLM service configurations.

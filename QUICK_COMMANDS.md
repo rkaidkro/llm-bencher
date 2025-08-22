@@ -2,7 +2,7 @@
 
 ## **One Command to Start Everything**
 
-When you're in the `m@RKBBC llm-testing-interface %` terminal, just run:
+When you're in the `m@RKBBC llm-bencher %` terminal, just run:
 
 ```bash
 ./start

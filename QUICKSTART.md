@@ -53,7 +53,7 @@ If you need to set up manually:
 
 ## 🧪 What We've Built
 
-✅ **Phase 1 Complete**: Basic LLM Testing Interface
+✅ **Phase 1 Complete**: Basic llm-bencher
 - FastAPI backend with SQLite database
 - Conversation management (create, read, update, delete)
 - LLM service integration (Ollama, LM Studio)
@@ -136,4 +136,4 @@ which python
 
 ---
 
-**🎉 You now have a working LLM Testing Interface!**
+**🎉 You now have a working llm-bencher!**

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Comprehensive Testing Framework for LLM Testing Interface
+Comprehensive Testing Framework for llm-bencher
 This script tests every component with detailed logging and error reporting.
 """
 

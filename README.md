@@ -1,4 +1,4 @@
-# LLM Testing Interface
+# llm-bencher
 
 A comprehensive interface for testing and benchmarking LLM models with support for multiple providers like Ollama and LM Studio.
 

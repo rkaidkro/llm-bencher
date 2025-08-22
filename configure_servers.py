@@ -2,7 +2,7 @@
 """
 Configuration helper for setting up remote LLM servers.
 
-This script helps you configure the LLM Testing Interface to connect to
+This script helps you configure llm-bencher to connect to
 remote Ollama and LM Studio servers on your network.
 """
 
@@ -80,7 +80,7 @@ def test_connection(ip, port, service_name):
 
 def main():
     """Main configuration function."""
-    print("🚀 LLM Testing Interface - Server Configuration")
+    print("🚀 llm-bencher - Server Configuration")
     print("=" * 50)
     print()
     

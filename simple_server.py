@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'backend'))
 
 def main():
     """Start the server."""
-    print("🚀 Starting LLM Testing Interface Server...")
+    print("🚀 Starting llm-bencher Server...")
     print("=" * 50)
     
     try:

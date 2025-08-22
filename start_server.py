@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Simple startup script for the LLM Testing Interface.
+Simple startup script for llm-bencher.
 
 This script starts the FastAPI server and provides easy access to test the API.
 """
@@ -13,7 +13,7 @@ import requests
 
 def start_server():
     """Start the FastAPI server."""
-    print("🚀 Starting LLM Testing Interface Server...")
+    print("🚀 Starting llm-bencher Server...")
     print("=" * 50)
     
     # Change to backend directory

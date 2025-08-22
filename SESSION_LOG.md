@@ -1,4 +1,4 @@
-# Session Log: LLM Testing Interface Development
+# Session Log: llm-bencher Development
 
 ## 📅 Session Overview
 **Date**: August 22, 2025  

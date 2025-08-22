@@ -1,5 +1,5 @@
 """
-Configuration management for the LLM Testing Interface.
+Configuration management for llm-bencher.
 
 This module provides a centralized configuration system that loads settings
 from environment variables and provides type-safe access to configuration values.

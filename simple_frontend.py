@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Simple frontend server using Python's built-in HTTP server.
-This will definitely work and show the LLM Testing Interface.
+This will definitely work and show the llm-bencher interface.
 """
 
 import http.server
@@ -29,7 +29,7 @@ class LLMInterfaceHandler(http.server.SimpleHTTPRequestHandler):
 <!DOCTYPE html>
 <html>
 <head>
-    <title>LLM Testing Interface</title>
+    <title>llm-bencher</title>
     <style>
         body {{
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -91,7 +91,7 @@ class LLMInterfaceHandler(http.server.SimpleHTTPRequestHandler):
 </head>
 <body>
     <div class="header">
-        <h1>LLM Testing Interface</h1>
+        <h1>llm-bencher</h1>
         <div class="status {'connected' if '✅' in backend_status else 'disconnected'}">
             {backend_status}
         </div>
@@ -99,7 +99,7 @@ class LLMInterfaceHandler(http.server.SimpleHTTPRequestHandler):
     
     <div class="main">
         <div class="card">
-            <h2>🎉 Welcome to LLM Testing Interface!</h2>
+            <h2>🎉 Welcome to llm-bencher!</h2>
             <p>Your interface is running successfully.</p>
             
             <div style="margin: 2rem 0;">

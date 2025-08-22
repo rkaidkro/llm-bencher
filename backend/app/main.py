@@ -1,5 +1,5 @@
 """
-Main FastAPI application for the LLM Testing Interface.
+Main FastAPI application for llm-bencher.
 
 This module sets up the FastAPI application with all necessary middleware,
 CORS configuration, and route registration.
@@ -44,7 +44,7 @@ logger = structlog.get_logger()
 async def lifespan(app: FastAPI):
     """Application lifespan manager."""
     # Startup
-    logger.info("Starting LLM Testing Interface")
+    logger.info("Starting llm-bencher")
     try:
         init_db()
         logger.info("Database initialized successfully")
@@ -55,7 +55,7 @@ async def lifespan(app: FastAPI):
     yield
     
     # Shutdown
-    logger.info("Shutting down LLM Testing Interface")
+    logger.info("Shutting down llm-bencher")
     try:
         close_db()
         logger.info("Database closed successfully")
@@ -65,7 +65,7 @@ async def lifespan(app: FastAPI):
 
 # Create FastAPI application
 app = FastAPI(
-    title="LLM Testing Interface",
+    title="llm-bencher",
     description="A comprehensive interface for testing and benchmarking LLM models",
     version="1.0.0",
     docs_url="/docs" if is_development() else None,
@@ -113,7 +113,7 @@ async def general_exception_handler(request, exc: Exception):
 async def root():
     """Root endpoint with basic information."""
     return {
-        "message": "LLM Testing Interface API",
+        "message": "llm-bencher API",
         "version": "1.0.0",
         "status": "running",
         "docs": "/docs" if is_development() else None

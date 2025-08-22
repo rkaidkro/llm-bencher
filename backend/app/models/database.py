@@ -2,7 +2,7 @@
 Database configuration and session management.
 
 This module provides the database engine, session factory, and base model
-for the LLM Testing Interface.
+for llm-bencher.
 """
 
 from sqlalchemy import create_engine

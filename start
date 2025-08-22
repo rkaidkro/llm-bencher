@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# LLM Testing Interface - One-Command Startup
+# llm-bencher - One-Command Startup
 # This script starts everything with comprehensive error checking and logging
 
 set -e  # Exit on any error
@@ -33,7 +33,7 @@ warning() {
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
-log "🚀 Starting LLM Testing Interface"
+log "🚀 Starting llm-bencher"
 log "📁 Working directory: $(pwd)"
 
 # Check if we're in the right place
@@ -155,7 +155,7 @@ fi
 
 # Success!
 echo
-success "🎉 LLM Testing Interface is now running!"
+success "🎉 llm-bencher is now running!"
 echo "=================================================="
 echo "🌐 Frontend:    http://localhost:3000"
 echo "🔧 Backend API: http://127.0.0.1:8000"

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Simple test script to verify the LLM Testing Interface API is working.
+Simple test script to verify the llm-bencher API is working.
 
 This script tests the basic endpoints to ensure the backend is functioning correctly.
 """
@@ -129,7 +129,7 @@ def test_monitoring_endpoint():
 
 def main():
     """Run all tests."""
-    print("🚀 Starting LLM Testing Interface API Tests")
+    print("🚀 Starting llm-bencher API Tests")
     print("=" * 50)
     
     # Wait a moment for server to be ready

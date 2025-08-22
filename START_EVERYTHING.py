@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Comprehensive startup script for the LLM Testing Interface.
+Comprehensive startup script for llm-bencher.
 This script handles all the setup and provides clear feedback.
 """
 
@@ -47,7 +47,7 @@ def check_port(port):
 
 def main():
     """Main startup function."""
-    print("🚀 LLM Testing Interface - Complete Startup")
+    print("🚀 llm-bencher - Complete Startup")
     print("=" * 50)
     
     # Get project root

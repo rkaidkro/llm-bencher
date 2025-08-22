@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# LLM Testing Interface - Test Runner
+# llm-bencher - Test Runner
 # Simple wrapper for the comprehensive testing framework
 
-echo "🧪 Running LLM Testing Interface Tests..."
+echo "🧪 Running llm-bencher Tests..."
 echo "=================================================="
 
 # Check if we're in the right directory

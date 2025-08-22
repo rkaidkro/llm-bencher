@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "🛑 Stopping LLM Testing Interface..."
+echo "🛑 Stopping llm-bencher..."
 pkill -f "uvicorn.*8000" 2>/dev/null || true
 pkill -f "simple_frontend.py" 2>/dev/null || true
 lsof -ti:8000 | xargs kill -9 2>/dev/null || true
