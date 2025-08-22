@@ -24,8 +24,16 @@ This will help you set up the IP addresses of your remote Ollama and LM Studio s
 python start_server.py
 ```
 
-### Step 4: Test the API
+### Step 4: Start the Frontend
+```bash
+# From the project root directory:
+python test_frontend.py
+```
+This will start the React frontend on http://localhost:3000
+
+### Step 5: Test Everything
 Open your browser and go to:
+- **Frontend**: http://localhost:3000
 - **API Documentation**: http://127.0.0.1:8000/docs
 - **Health Check**: http://127.0.0.1:8000/health
 
